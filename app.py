@@ -411,9 +411,9 @@ def Connectdb():
             con=pymysql.connect(host=host,user=user,password=password)
             mycursor=con.cursor()
             message = 'New login. Dear Hemanth, we detected a login into your database on {} at {} IST.\n\nDevice: {}\nIP Address: {}\nCity: {}\nCountry: {}\nOrganization: {}\n\nIf this wasnt you, Sorry Hemanth, the database is being used by someone else....'.format(addeddate, addedtime,hostname,IP,city,country,org)
-            token = '1310871540:AAF7EzI9VjdUF5_9B8yzlAmWzoPfp-0J63Y'
+            token = '5029349522:AAHyH9TlmLxPJDoAFjkR2Vn_FFh-2ouBLQ0'
             url = f'https://api.telegram.org/bot{token}/sendMessage'
-            data = {'chat_id': {627491741}, 'text': {message}}
+            data = {'chat_id': {5060166011}, 'text': {message}} # Kumar swami -- > 874434712 
             requests.post(url, data).json()
         except:
             messagebox.showerror('Notification','Date is incorrect please try again')
